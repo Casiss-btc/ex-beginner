@@ -1,0 +1,14 @@
+<!-- ex-10-output.html -->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>足し算結果画面</h5>
+    <span th:text="${session.result}"></span><br>
+    <a href="/exam02/to-page1" th:href="@{/exam02/to-page1}">to page1</a>
+</body>
+</html>
