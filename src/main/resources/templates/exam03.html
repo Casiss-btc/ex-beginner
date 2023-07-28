@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    情報を入力してください。
+    <form action="exam03/exam-03-receive"
+    th:action="@{/exam03/exam-03-receive}" method="post">
+        商品１<input type="number" name="num1">円<br>
+        商品２<input type="number" name="num2">円<br>
+        商品３<input type="number" name="num3">円<br>
+        <button>購入</button>
+    </form>
+</body>
+</html>

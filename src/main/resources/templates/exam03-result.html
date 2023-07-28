@@ -1,0 +1,14 @@
+<!-- ex-10-output.html -->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>合計金額</h5>
+    税抜き価格：<span th:text="${application.result}"></span>円<br>
+    税込み価格：<span th:text="${application.result_tax}"></span>円<br>
+</body>
+</html>
