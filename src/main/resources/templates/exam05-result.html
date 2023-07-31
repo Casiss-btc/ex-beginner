@@ -1,0 +1,17 @@
+<!-- ex-10-output.html -->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>検索結果</h5>
+    <table>
+        <tr th:each="member : ${memberList}">
+            <td th:text="${member.name}"></td>
+        </tr>
+    </table>
+</body>
+</html>
