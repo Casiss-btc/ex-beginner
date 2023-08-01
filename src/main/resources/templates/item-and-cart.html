@@ -7,18 +7,20 @@
 </head>
 <body>
     <h4>商品一覧</h4>
-    <form th:each="item, index : ${application.itemNamePrice}" th:action="@{/exam06/add}" method="post">
+    <form th:each="item, status : ${application.itemNamePrice}" th:action="@{/exam06/add}" method="post">
         <p>商品：<span th:text="${item.name}"></span></p>
         <p>金額：<span th:text="${item.price}"></span>円</p>
-        <input type="hidden" name="index" th:value="${index.index}"><br>
+        <input type="hidden" name="index" th:value="${status.index}"><br>
         <button type="submit">カートへ</button><br>
     </form>
     
     <h5>ショッピングカート</h5>
-    <div th:each="item : ${session.cartItems}">
+    <form th:each="item, status : ${session.cartItems}" th:action="@{/exam06/delete}" method="post">
         <p>商品：<span th:text="${item.name}"></span></p>
         <p>金額：<span th:text="${item.price}"></span>円</p>
-    </div>
+        <input type="hidden" name="index" th:value="${status.index}"><br>
+        <button type="submit">削除</button><br>
+    </form>
     合計<div th:text="${totalPrice}"></div>円
 </body>
 </html>
